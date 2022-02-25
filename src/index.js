@@ -3,8 +3,7 @@ import ReactDOM from "react-dom";
 import "jquery";
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import { NavBar } from "./App";
+import "./index.css";
 
-var element = <button class="btn btn-danger">Hello World</button>;
-ReactDOM.render(element, document.getElementById("root"));
-
-console.log(element);
+ReactDOM.render(<NavBar />, document.getElementById("root"));
