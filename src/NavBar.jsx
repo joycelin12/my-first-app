@@ -6,7 +6,7 @@ export default class NavBar extends Component {
         <nav className="navbar navbar-light bg-light navbar-style">
           <div className="container-fluid">
             <a className="navbar-brand" href="/#">
-              My App
+              eCommerce
             </a>
             <button
               className="navbar-toggler"
