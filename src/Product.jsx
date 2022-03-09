@@ -19,6 +19,8 @@ export default class Product extends Component {
             </h5>
             <div>${this.state.product.price}</div>
           </div>
+          {/* card body ends here */}
+          <div className="card-footer text-end">{this.props.children}</div> 
         </div>
       </div>
     );
