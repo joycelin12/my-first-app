@@ -29,4 +29,6 @@ export default class ShoppingCart extends Component {
       </div>
     );
   }
+
+  handleIncrement = () => {};
 }
