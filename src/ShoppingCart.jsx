@@ -50,6 +50,20 @@ export default class ShoppingCart extends Component {
     console.log("componentDidMount - ShoppingCart");
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log(
+      "componentDidUpdate - ShoppingCart",
+      prevProps,
+      prevState,
+      this.props,
+      this.state
+    );
+
+    if (prevProps.x != this.props.x) {
+      // make http call
+    }
+  }
+
   //executes when the user clicks on + button
   handleIncrement = (product, maxValue) => {
     //console.log("handleIncrement", product);
