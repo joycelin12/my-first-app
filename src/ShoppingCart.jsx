@@ -59,9 +59,13 @@ export default class ShoppingCart extends Component {
       this.state
     );
 
-    if (prevProps.x != this.props.x) {
-      // make http call
-    }
+    //if (prevProps.x != this.props.x) {
+    // make http call
+    //}
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount - ShoppingCart");
   }
 
   //executes when the user clicks on + button
