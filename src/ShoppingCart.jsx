@@ -7,9 +7,10 @@ export default class ShoppingCart extends Component {
     //console.log("constructor - ShoppingCart");
     super(props); // calling super class's constructor
     //initialization of the state
+    //json-server react-db.json --watch --port=5000
     this.state = {
       products: [
-        { id: 1, productName: "iPhone 7", price: 5900, quantity: 0 },
+        //{ id: 1, productName: "iPhone 7", price: 5900, quantity: 0 },
         // { id: 2, productName: "iPhone 8", price: 6900, quantity: 1 },
         // { id: 3, productName: "iPhone 9", price: 7900, quantity: 2 },
         // { id: 4, productName: "iPhone 10", price: 8900, quantity: 2 },
@@ -47,6 +48,18 @@ export default class ShoppingCart extends Component {
   //Executes after constructor and render method(includes life cycle of child components, if any) of current constructor
   componentDidMount() {
     //fetch data from data source
+    var promise = fetch("http://localhost:5000/products", { method: "GET" });
+    promise.then((response) => {
+      console.log(response);
+
+      var promise2 = response.json();
+      promise2.then((prods) => {
+        console.log(prods);
+
+        this.setState({ products: prods });
+      });
+    });
+
     //console.log("componentDidMount - ShoppingCart");
   }
 
