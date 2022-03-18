@@ -4,7 +4,7 @@ import Product from "./Product";
 export default class ShoppingCart extends Component {
   //Executes when component is mounted
   constructor(props) {
-    console.log("constructor - ShoppingCart");
+    //console.log("constructor - ShoppingCart");
     super(props); // calling super class's constructor
     //initialization of the state
     this.state = {
@@ -47,30 +47,29 @@ export default class ShoppingCart extends Component {
   //Executes after constructor and render method(includes life cycle of child components, if any) of current constructor
   componentDidMount() {
     //fetch data from data source
-    console.log("componentDidMount - ShoppingCart");
+    //console.log("componentDidMount - ShoppingCart");
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(
-      "componentDidUpdate - ShoppingCart",
-      prevProps,
-      prevState,
-      this.props,
-      this.state
-    );
-
+    //console.log(
+    // "componentDidUpdate - ShoppingCart",
+    // prevProps,
+    // prevState,
+    // this.props,
+    // this.state
+    //);
     //if (prevProps.x != this.props.x) {
     // make http call
     //}
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount - ShoppingCart");
+    //console.log("componentWillUnmount - ShoppingCart");
   }
 
   componentDidCatch(error, info) {
-    console.log("componentDidCatch - ShoppingCart");
-    console.log(error, info);
+    //console.log("componentDidCatch - ShoppingCart");
+    //console.log(error, info);
 
     localStorage.lastError = `${error}\n${JSON.stringify(info)}`;
   }

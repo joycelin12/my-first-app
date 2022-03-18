@@ -2,16 +2,16 @@ import React, { Component } from "react";
 
 export default class Product extends Component {
   constructor(props) {
-    console.log("Constructor - Product");
+    //console.log("Constructor - Product");
     super(props);
     this.state = {
-      product: this.props.prduct,
+      product: this.props.product,
     };
   }
 
   render() {
     //console.log(this.props);
-    console.log("Render- Product");
+    //console.log("Render- Product");
 
     return (
       <div className="col-lg-6">
@@ -65,7 +65,7 @@ export default class Product extends Component {
       </div>
     );
   }
-
+  /* 
   componentDidMount() {
     console.log("componentDidMount - Product");
   }
@@ -78,4 +78,5 @@ export default class Product extends Component {
   componentWillUnmount() {
     console.log("componentWillUnmount - Product");
   }
+  */
 }
