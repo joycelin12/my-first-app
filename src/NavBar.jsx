@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 export default class NavBar extends Component {
   render() {
     return (
@@ -26,13 +27,32 @@ export default class NavBar extends Component {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item">
-                    <a
-                      className="nav-link active"
+                    <Link className="nav-link" aria-current="page" to="/">
+                      Login
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
                       aria-current="page"
-                      href="/#"
+                      to="/dashboard"
                     >
-                      Home
-                    </a>
+                      Dashboard
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
+                      aria-current="page"
+                      to="/customers"
+                    >
+                      Customers
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" aria-current="page" to="/cart">
+                      Shopping Cart
+                    </Link>
                   </li>
                 </ul>
               </div>
